@@ -1,0 +1,4 @@
+Spacebar - Changes From Day to Night or Night to Day.  Changes clouds, adds stars, changes color of snow if snowing == True
+R - Changes Snow to Rain, Changes Santa to Pikachu
+
+Pressing R also changes the background from snowy to grassy
