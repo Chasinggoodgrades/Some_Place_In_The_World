@@ -20,12 +20,14 @@ SIZE = (800, 600)
 TITLE = "Some place in the World"
 screen = pygame.display.set_mode(SIZE)
 pygame.display.set_caption(TITLE)
+
+#Picture Imports
 SKY = pygame.image.load('pictures/bingo.png')
 NIGHT = pygame.image.load('pictures/night.png')
 SANTA = pygame.image.load('pictures/santa.png')
 GSKY = pygame.image.load('pictures/gsky.png')
 GNIGHT = pygame.image.load('pictures/gnight.png')
-pikchu = pygame.image.load('pictures/pokemon.png')
+PIKACHU = pygame.image.load('pictures/pokemon.png')
 THANKS = pygame.image.load('pictures/thanks.png')
 
 # Timer
@@ -94,8 +96,8 @@ def draw_thanks(x, y):
 def draw_santa(x, y):
     screen.blit(SANTA,(x, y))
 
-def draw_pikchu(x, y):
-    screen.blit(pikchu, (x, y))
+def draw_PIKACHU(x, y):
+    screen.blit(PIKACHU, (x, y))
 
 def day_night():
     if daytime == True and snowing == True:
@@ -235,7 +237,7 @@ while not done:
             r[0] = random.randrange(0, 1000)
             r[1] = random.randrange(-100, 0)
 
-# Move Santa/pikchu
+# Move Santa/PIKACHU
     for r in santa:
         r[1] += random.randint(0, 1)
         if r[1] > 0:
@@ -271,13 +273,13 @@ while not done:
     for c in clouds:
         draw_cloud(c)
 
-#Santas / pikchu
+#Santas / PIKACHU
     if snowing == True:
         for r in santa:
             draw_santa(r[0], r[1])
     else:
         for r in santa:
-            draw_pikchu(r[0], r[1])
+            draw_PIKACHU(r[0], r[1])
 
 #Thanks
     if snowing == False and daytime == False:
